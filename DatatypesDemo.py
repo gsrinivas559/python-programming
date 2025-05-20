@@ -13,7 +13,7 @@ print(type(e))  # <class 'bool'>
 # To resolve the above issue, we can concatenate the values using format method
 print("{} {}".format("A value is: ", a))    # A value is:  5
 
-# DataTypes -->
+# DataTypes --> Different types of datatypes
 # 1. Numeric --> int, float, long[deprecated in python3.x], complex
 # 2. String -->  sequence of characters represented by either single or double-quotes
 # 3. List --> The list in Python is it can simultaneously hold different types of data.
