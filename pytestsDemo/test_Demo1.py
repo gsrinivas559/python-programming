@@ -19,7 +19,8 @@ import pytest
 # you can mark (tag) tests @pytest.mark.smoke and then run with -m
 # you can skip tests with @pytest.mark.skip
 # you can mark tests with @pytest.mark.xfail for those execution will be done but will not consider result in reports
-
+# datadriven and parameterization can be done with return statements in list form
+# When you define scope to class only, it will run once before class is initiated and at the end
 
 @pytest.mark.smoke
 def test_firstProgram():
@@ -29,3 +30,9 @@ def test_firstProgram():
 @pytest.mark.xfail
 def test_Greet():
     print("Good Morning!")
+
+
+@pytest.mark.usefixtures("crossBrowser")
+def test_crossBrowser(crossBrowser):
+    print(crossBrowser)  # will run 3 times
+    print(crossBrowser[1])  # all 1st index values will be retrieved i.e, ChromeDriver EdgeDriver GeckoDriver
